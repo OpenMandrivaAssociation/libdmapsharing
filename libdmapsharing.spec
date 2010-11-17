@@ -3,7 +3,7 @@
 %define develname %mklibname -d dmapsharing
 
 Name: libdmapsharing
-Version: 2.1.7
+Version: 2.1.9
 Release: %mkrel 1
 License: LGPLv2+
 Source: http://www.flyn.org/projects/libdmapsharing/%{name}-%{version}.tar.gz
