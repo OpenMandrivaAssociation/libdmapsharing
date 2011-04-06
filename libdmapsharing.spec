@@ -4,7 +4,7 @@
 
 Name: libdmapsharing
 Version: 2.1.9
-Release: %mkrel 1
+Release: %mkrel 2
 License: LGPLv2+
 Source: http://www.flyn.org/projects/libdmapsharing/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
