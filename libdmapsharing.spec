@@ -11,6 +11,7 @@ License: LGPLv2+
 Group: System/Libraries
 URL: http://www.flyn.org/projects/libdmapsharing/index.html
 Source0: http://www.flyn.org/projects/libdmapsharing/%{name}-%{version}.tar.gz
+Patch0: libdmapsharing-2.9.14-link.patch
 
 BuildRequires: gnome-common
 BuildRequires: gtk-doc
@@ -19,6 +20,7 @@ BuildRequires: pkgconfig(avahi-glib)
 BuildRequires: pkgconfig(gdk-pixbuf-2.0)
 BuildRequires: pkgconfig(gee-1.0)
 BuildRequires: pkgconfig(glib-2.0)
+BuildRequires: pkgconfig(gtk+-2.0)
 BuildRequires: pkgconfig(gstreamer-plugins-base-0.10)
 BuildRequires: pkgconfig(libsoup-2.4)
 
@@ -47,6 +49,8 @@ other resources needed for developing applications using libdmapsharing.
 
 %prep
 %setup -q
+%apply_patches
+NOCONFIGURE=yes gnome-autogen.sh
 
 %build
 %configure2_5x \
