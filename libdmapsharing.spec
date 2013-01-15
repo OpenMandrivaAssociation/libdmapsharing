@@ -12,6 +12,7 @@ Group:		System/Libraries
 URL:		http://www.flyn.org/projects/libdmapsharing/index.html
 Source0:	http://www.flyn.org/projects/libdmapsharing/%{name}-%{version}.tar.gz
 Patch0:		libdmapsharing-2.9.14-link.patch
+Patch1:		libdmapsharing-automake-1.13.patch
 
 BuildRequires:	gnome-common
 BuildRequires:	gtk-doc
