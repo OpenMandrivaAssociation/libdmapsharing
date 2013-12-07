@@ -7,7 +7,7 @@
 Summary:	A DMAP client and server library
 Name:		libdmapsharing
 Version:	2.9.17
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.flyn.org/projects/libdmapsharing/index.html
