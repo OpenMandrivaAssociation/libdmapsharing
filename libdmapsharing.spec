@@ -68,4 +68,4 @@ other resources needed for developing applications using libdmapsharing.
 %{_includedir}/libdmapsharing-%{api}
 %{_libdir}/libdmapsharing-%{api}.so
 %{_datadir}/gtk-doc/html/libdmapsharing-%{api}
-
+%{_datadir}/vala/vapi/%{name}-%{api}.vapi
