@@ -6,14 +6,12 @@
 
 Summary:	A DMAP client and server library
 Name:		libdmapsharing
-Version:	2.9.17
-Release:	8
+Version:	2.9.29
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.flyn.org/projects/libdmapsharing/index.html
 Source0:	http://www.flyn.org/projects/libdmapsharing/%{name}-%{version}.tar.gz
-Patch0:		libdmapsharing-2.9.14-link.patch
-Patch1:		libdmapsharing-automake-1.13.patch
 
 BuildRequires:	gnome-common
 BuildRequires:	gtk-doc
@@ -54,12 +52,9 @@ other resources needed for developing applications using libdmapsharing.
 %prep
 %setup -q
 %apply_patches
-NOCONFIGURE=yes gnome-autogen.sh
 
 %build
-%configure2_5x \
-	--disable-static
-
+%configure LIBS=-lm
 %make
 
 %install
