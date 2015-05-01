@@ -6,7 +6,7 @@
 
 Summary:	A DMAP client and server library
 Name:		libdmapsharing
-Version:	2.9.29
+Version:	2.9.30
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
