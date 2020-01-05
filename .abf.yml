@@ -1,5 +1,2 @@
-removed_sources:
-  libdmapsharing-2.9.15.tar.gz: 289a83813a391dd471f8fef56377e167634eeea2
-  libdmapsharing-2.9.29.tar.gz: 4b4d6713e1f337c220d847de33df4d17dc629a7b
 sources:
-  libdmapsharing-2.9.30.tar.gz: 92cfeb4d6268fb733d88df60f4edbadfa4af340a
+  libdmapsharing-2.9.39.tar.gz: 16c775d085f2990dd24755eaea3845fbca4ca888
