@@ -12,6 +12,8 @@ License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.flyn.org/projects/libdmapsharing/index.html
 Source0:	http://www.flyn.org/projects/libdmapsharing/%{name}-%{version}.tar.gz
+#Upstream patch to fix build with new vala: https://gitlab.gnome.org/GNOME/libdmapsharing/issues/7
+Patch0:   new_vala_build.patch
 
 BuildRequires:	gnome-common
 BuildRequires:	gtk-doc
@@ -54,7 +56,9 @@ other resources needed for developing applications using libdmapsharing.
 %autopatch -p1
 
 %build
-%configure LIBS=-lm
+%configure LIBS=-lm \
+  --disable-tests
+  
 %make_build
 
 %install
