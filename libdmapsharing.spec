@@ -6,8 +6,8 @@
 
 Summary:	A DMAP client and server library
 Name:		libdmapsharing
-Version:	2.9.30
-Release:	3
+Version:	2.9.39
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.flyn.org/projects/libdmapsharing/index.html
@@ -51,14 +51,14 @@ other resources needed for developing applications using libdmapsharing.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure LIBS=-lm
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{libname}
 %{_libdir}/libdmapsharing-%{api}.so.%{major}*
