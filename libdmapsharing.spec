@@ -1,19 +1,17 @@
 %define gstapi	1.0
-%define api	3.0
-%define major	2
+%define api	4.0
+%define major	3
 %define libname	%mklibname dmapsharing %{api} %{major}
 %define devname	%mklibname -d dmapsharing
 
 Summary:	A DMAP client and server library
 Name:		libdmapsharing
-Version:	2.9.39
-Release:	2
+Version:	3.9.13
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.flyn.org/projects/libdmapsharing/index.html
 Source0:	http://www.flyn.org/projects/libdmapsharing/%{name}-%{version}.tar.gz
-#Upstream patch to fix build with new vala: https://gitlab.gnome.org/GNOME/libdmapsharing/issues/7
-Patch0:   new_vala_build.patch
 
 BuildRequires:	gnome-common
 BuildRequires:	gtk-doc
@@ -25,8 +23,7 @@ BuildRequires:	pkgconfig(gee-0.8)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gstreamer-plugins-base-%{gstapi})
-BuildRequires:	pkgconfig(howl)
-BuildRequires:	pkgconfig(libsoup-2.4)
+BuildRequires:	pkgconfig(libsoup-3.0)
 
 %description
 libdmapsharing implements the DMAP protocols. This includes support for
@@ -52,8 +49,7 @@ DAAP and DPAP.  This package provides the libraries, include files, and
 other resources needed for developing applications using libdmapsharing.
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 %configure LIBS=-lm \
