@@ -1,8 +1,10 @@
+%define girapi  4.0
 %define gstapi	1.0
 %define api	4.0
 %define major	3
 %define libname	%mklibname dmapsharing %{api} %{major}
 %define devname	%mklibname -d dmapsharing
+%define girname %mklibname dmap-gir %{girapi}
 
 Summary:	A DMAP client and server library
 Name:		libdmapsharing
@@ -24,6 +26,7 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gstreamer-plugins-base-%{gstapi})
 BuildRequires:	pkgconfig(libsoup-3.0)
+BuildRequires:	pkgconfig(vapigen)
 
 %description
 libdmapsharing implements the DMAP protocols. This includes support for
@@ -37,10 +40,21 @@ Group:		System/Libraries
 libdmapsharing implements the DMAP protocols. This includes support for
 DAAP and DPAP.
 
+%package -n     %{girname}
+Summary:        GObject Introspection interface library for Dmap
+Group:          System/Libraries
+
+%description -n %{girname}
+GObject Introspection interface library for Dmap.
+
+%files -n %{girname}
+%{_libdir}/girepository-1.0/Dmap-%{girapi}.typelib
+
 %package -n %{devname}
 Summary:	Files needed to develop applications using libdmapsharing
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
+Requires:	%{girname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 
 %description -n %{devname}
@@ -68,4 +82,5 @@ other resources needed for developing applications using libdmapsharing.
 %{_includedir}/libdmapsharing-%{api}
 %{_libdir}/libdmapsharing-%{api}.so
 %{_datadir}/gtk-doc/html/libdmapsharing-%{api}
+%{_datadir}/gir-1.0/Dmap-%{girapi}.gir
 %{_datadir}/vala/vapi/%{name}-%{api}.vapi
