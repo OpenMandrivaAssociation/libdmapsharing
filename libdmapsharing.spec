@@ -12,7 +12,7 @@ Version:	3.9.13
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
-Url:		http://www.flyn.org/projects/libdmapsharing/index.html
+Url:		https://www.flyn.org/projects/libdmapsharing/index.html
 Source0:	http://www.flyn.org/projects/libdmapsharing/%{name}-%{version}.tar.gz
 
 BuildRequires:	gnome-common
