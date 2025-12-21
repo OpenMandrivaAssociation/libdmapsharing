@@ -15,6 +15,11 @@ Group:		System/Libraries
 Url:		https://www.flyn.org/projects/libdmapsharing/index.html
 Source0:	http://www.flyn.org/projects/libdmapsharing/%{name}-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gnome-common
 BuildRequires:	gtk-doc
 BuildRequires:	vala-tools
